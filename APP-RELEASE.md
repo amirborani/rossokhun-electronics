@@ -13,7 +13,7 @@ The app's native package ID is `com.moddeeshop.app`; changing it after publishin
 
 ## Cloudflare Worker deployment
 
-The existing Cloudflare Worker is named `portfolio-website`. The repository uses Wrangler static assets to serve the built site from `dist/`. To deploy manually, authorize Wrangler with `npx wrangler login` and run `npm run deploy:worker`. For GitHub-connected builds, set the build command to `npm run build` and the deploy command to `npx wrangler deploy`; the repository's `wrangler.toml` supplies the Worker name and assets directory.
+The existing Cloudflare Worker is named `rossokhun-electronics`. The repository uses Wrangler static assets to serve the built site from `dist/`. To deploy manually, authorize Wrangler with `npx wrangler login` and run `npm run deploy:worker`. For GitHub-connected builds, set the build command to `npm run build` and the deploy command to `npx wrangler deploy`; the repository's `wrangler.toml` supplies the Worker name and assets directory.
 
 ## Google Search
 
