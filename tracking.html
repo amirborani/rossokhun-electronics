@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#f3f8fb">
+    <title>ติดตามการจัดส่ง | Moddee Shop</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='13' fill='%23087da4'/%3E%3Cpath d='M9 29V15h4l7 8 7-8h4v14h-5v-7l-6 7-6-7v7z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="delivery.css">
+  </head>
+  <body class="delivery-page">
+    <header class="delivery-header">
+      <a class="brand" href="index.html" aria-label="Moddee Shop">
+        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="13" fill="#087da4"/><path d="M8.5 28V14.5h4.2l7.3 8 7.3-8h4.2V28h-5.2v-6.8L20 27.8l-6.3-6.6V28H8.5Z" fill="white"/></svg></span>
+        <span class="brand__wordmark">moddee<span>shop</span></span>
+      </a>
+      <div class="delivery-header__actions">
+        <button class="delivery-language" type="button" data-language-switch aria-label="Switch language"></button>
+        <a class="delivery-home" href="index.html" data-copy="home">กลับหน้าร้าน</a>
+      </div>
+    </header>
+
+    <main class="delivery-main">
+      <section class="delivery-intro">
+        <h1 data-copy="trackingTitle">ติดตามการจัดส่ง</h1>
+        <p data-copy="trackingIntro">เปิดลิงก์ติดตามที่ร้านส่งให้ เพื่อดูสถานะและตำแหน่งของผู้จัดส่ง</p>
+      </section>
+      <p class="delivery-message" data-setup-notice hidden role="status"></p>
+      <form class="delivery-token-form" id="tracking-form" data-requires-supabase>
+        <label for="tracking-token" data-copy="trackingTokenLabel">รหัสติดตามจากลิงก์</label>
+        <div class="delivery-token-form__row">
+          <input id="tracking-token" name="token" type="text" inputmode="text" autocomplete="off" spellcheck="false" maxlength="64" pattern="[a-fA-F0-9]{64}" required data-copy-placeholder="trackingTokenPlaceholder">
+          <button type="submit" class="delivery-button" data-copy="trackButton">ดูสถานะ</button>
+        </div>
+      </form>
+      <p class="delivery-message" id="tracking-message" hidden role="status"></p>
+      <section class="tracking-result" id="tracking-result" hidden>
+        <div class="tracking-result__summary">
+          <div>
+            <p class="delivery-label" data-copy="reference">หมายเลขอ้างอิง</p>
+            <strong id="tracking-reference"></strong>
+          </div>
+          <span class="delivery-status" id="tracking-status"></span>
+        </div>
+        <p class="tracking-result__updated" id="tracking-updated"></p>
+        <div class="tracking-map-shell">
+          <div class="tracking-map-placeholder" id="tracking-waiting" data-copy="trackingWaiting">รอผู้จัดส่งเริ่มแชร์ตำแหน่ง</div>
+          <div class="tracking-map" id="tracking-map" role="region" aria-label="Courier location map" data-copy-aria="mapLabel"></div>
+        </div>
+        <p class="tracking-result__privacy" data-copy="trackingPrivacy">ตำแหน่งจะแสดงเฉพาะระหว่างจัดส่ง และจะหยุดเมื่อส่งสำเร็จ</p>
+      </section>
+    </main>
+    <script type="module" src="/src/tracking.js"></script>
+  </body>
+</html>

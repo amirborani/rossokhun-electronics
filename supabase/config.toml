@@ -1,0 +1,2 @@
+[functions.moddee-chat]
+verify_jwt = false

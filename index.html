@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#d4145a">
+    <meta name="description" content="Explore Moddee Shop in Thai or English, browse the sample catalog, play arcade games, and contact the shop owner.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Moddee Shop">
+    <meta property="og:title" content="Moddee Shop | Everyday finds">
+    <meta property="og:description" content="Browse the Moddee Shop catalog, discover the owner profile, and enjoy original arcade games.">
+    <meta name="twitter:card" content="summary">
+    <title>Moddee Shop | Everyday finds</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23d4145a'/%3E%3Cpath d='M9 29V15h4l7 8 7-8h4v14h-5v-7l-6 7-6-7v7z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- THESIS: Moddee Shop turns browsing into a vivid irezumi-inspired storefront, not a generic marketplace grid.
+    OWN-WORLD: Saturated sakura pink, plum-black ink, original wave and peony linework, and crisp paper-like panels.
+    STORY: Visitors find sample products, meet the owner, and reach the shop while clearly seeing that catalog items are examples.
+    FIRST VIEWPORT: A pink inked masthead frames search; the patterned hero pairs the shop invitation with the owner's portrait and contact icons.
+    FORM: User-pinned Japanese tattoo-print world; grounded seed 63cd33d1 yielded an unrelated alternative, so the pinned brief wins. A responsive paper-panel catalog carries the visitor from the patterned hero into three selectable local games. -->
+    <div class="demo-banner">
+      <span class="demo-banner__dot" aria-hidden="true"></span>
+      <span data-i18n="demoNotice">عرض تجريبي · المنتجات والأثمنة أمثلة فقط</span>
+      <span class="demo-banner__english">DEMO CATALOG</span>
+    </div>
+
+    <header class="site-header">
+      <div class="header-main">
+        <a class="brand" href="#" aria-label="Moddee Shop home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="13" fill="white"/>
+              <path d="M8.5 28V14.5h4.2l7.3 8 7.3-8h4.2V28h-5.2v-6.8L20 27.8l-6.3-6.6V28H8.5Z" fill="var(--accent)"/>
+            </svg>
+          </span>
+          <span class="brand__wordmark">moddee<span>shop</span></span>
+        </a>
+
+        <form class="search" role="search" id="search-form">
+          <button class="search__camera" id="search-camera" type="button" aria-label="Search with a photo" title="Search with a photo">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 8.5h3l1.5-2h7l1.5 2h3A1.5 1.5 0 0 1 21.5 10v8A1.5 1.5 0 0 1 20 19.5H4A1.5 1.5 0 0 1 2.5 18v-8A1.5 1.5 0 0 1 4 8.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <circle cx="12" cy="13.5" r="3.3" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M18 11h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <input class="sr-only" id="search-photo-input" type="file" accept="image/*" capture="environment" tabindex="-1" aria-hidden="true">
+          <label class="sr-only" for="search-input" data-i18n="searchLabel">ค้นหาสินค้า</label>
+          <input id="search-input" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="ค้นหาสินค้า เช่น หูฟัง">
+          <button class="search__button" type="submit" data-i18n="searchButton">ค้นหา</button>
+          <span class="search__photo-status" id="search-photo-status" role="status" aria-live="polite" hidden></span>
+        </form>
+
+        <div class="header-actions">
+          <button class="language-switch" id="language-switch" type="button" aria-label="Switch language to English">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M3.5 12h17M12 3c2.2 2.4 3.2 5.4 3.2 9s-1 6.6-3.2 9c-2.2-2.4-3.2-5.4-3.2-9s1-6.6 3.2-9Z" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+            <span id="language-label">EN</span>
+          </button>
+          <button class="owner-shortcut" id="owner-shortcut" type="button" aria-label="เจ้าของร้าน" aria-controls="owner-profile">
+            <img src="/images/moddee-shop-owner.png" alt="" class="owner-shortcut__photo">
+            <span class="owner-shortcut__label" data-i18n="profileLabel">เจ้าของร้าน</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="category-nav" aria-label="Shop categories">
+        <a class="category-nav__link category-nav__link--active" href="#catalog" data-category-link="all" data-i18n="navAll">สินค้าทั้งหมด</a>
+        <a class="category-nav__link" href="#catalog" data-category-link="fashion" data-i18n="navFashion">แฟชั่น</a>
+        <a class="category-nav__link" href="#catalog" data-category-link="tech" data-i18n="navTech">อิเล็กทรอนิกส์</a>
+        <a class="category-nav__link" href="#catalog" data-category-link="beauty" data-i18n="navBeauty">ความงาม</a>
+        <a class="category-nav__link" href="#catalog" data-category-link="home" data-i18n="navHome">ของใช้ในบ้าน</a>
+        <a class="category-nav__link" href="tracking.html" data-i18n="navTrack">ติดตามการจัดส่ง</a>
+        <a class="category-nav__link" href="#games" data-i18n="navGames">เกม</a>
+        <span class="category-nav__note" data-i18n="navSample">หมวดหมู่ตัวอย่าง</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div class="welcome__copy">
+          <h1 id="welcome-title"><span data-i18n="welcomeTitle">ช้อปง่าย ๆ</span><br><span class="welcome__title-accent" data-i18n="welcomeTitleAccent">ในแบบของคุณ</span></h1>
+          <p class="welcome__description" data-i18n="welcomeDescription">ค้นพบสินค้าหลากหลาย พร้อมเลือกดูได้สะดวกในที่เดียว</p>
+          <a class="welcome__button" href="#catalog">
+            <span data-i18n="browseButton">เลือกชมสินค้า</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="welcome__disclaimer" data-i18n="welcomeDisclaimer">สินค้าและราคาในหน้านี้เป็นตัวอย่างสำหรับสาธิต</p>
+        </div>
+
+        <aside class="owner-profile" id="owner-profile" aria-label="โปรไฟล์เจ้าของร้าน">
+            <div class="owner-profile__identity">
+              <div class="owner-profile__photo-wrap">
+                <img src="/images/moddee-shop-owner.png" alt="Shop owner of Moddee Shop" class="owner-profile__photo">
+              </div>
+              <div class="owner-profile__details">
+                <span class="owner-profile__overline" data-i18n="ownerOverline">ร้านค้าโดย</span>
+                <h2>stickmodjang</h2>
+                <p data-i18n="ownerRole">เจ้าของร้าน</p>
+              </div>
+            </div>
+            <div class="owner-profile__actions" aria-label="Owner contact links">
+              <a class="owner-profile__contact owner-profile__contact--phone" href="tel:+66970730897" aria-label="Call Moddee Shop: 097-0730897" data-contact-detail="097-0730897" title="097-0730897">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.1 3.8 9.5 3c.7-.2 1.4.2 1.6.9l1 3.5c.2.6-.1 1.2-.6 1.6l-1.6 1.2a15 15 0 0 0 5 5l1.2-1.6c.4-.5 1-.7 1.6-.6l3.5 1c.7.2 1.1.9.9 1.6l-.8 2.4c-.3.8-1 1.3-1.9 1.3A16.2 16.2 0 0 1 4.5 5.7c0-.9.5-1.6 1.3-1.9l1.3-.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>097-0730897</span>
+              </a>
+              <a class="owner-profile__contact owner-profile__contact--email" href="mailto:Sticmod@hotmail.com" aria-label="Email Moddee Shop: Sticmod@hotmail.com" data-contact-detail="Sticmod@hotmail.com" title="Sticmod@hotmail.com">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7 7.5 5.5L19.5 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span data-i18n="emailCta">Email</span><span>Sticmod@hotmail.com</span>
+              </a>
+              <a class="owner-profile__contact owner-profile__contact--whatsapp" href="https://wa.me/66970730897" target="_blank" rel="noopener noreferrer" aria-label="Message Moddee Shop on WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19.2 4.8A9.2 9.2 0 0 0 4.7 16l-1.2 4.3 4.4-1.1A9.2 9.2 0 1 0 19.2 4.8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.2 7.8c.3-.4.6-.4.9-.4h.3c.2 0 .4.1.5.4l.7 1.8c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4-.1.6.6 1.1 1.4 1.9 2.6 2.5.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .6-.3 1.3-.8 1.7-.5.5-1.3.7-2.1.6-1.2-.2-2.6-.8-4-2.1-1.5-1.4-2.5-3.1-2.8-4.3-.3-.9-.1-1.7.4-2.2Z" fill="currentColor"/></svg>
+                <span data-i18n="whatsappCta">WhatsApp</span>
+              </a>
+              <a class="owner-profile__contact owner-profile__contact--line" href="https://line.me/R/ti/p/~Rossukhon%20123" target="_blank" rel="noopener noreferrer" aria-label="Add Rossukhon 123 on LINE" data-contact-detail="Rossukhon 123" title="Rossukhon 123">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11c0 4-3.6 7.2-8 7.2-.9 0-1.8-.1-2.6-.4L4 20l1.5-4A6.6 6.6 0 0 1 4 11c0-4 3.6-7.2 8-7.2s8 3.2 8 7.2Z" fill="#06c755"/><text x="12" y="13.8" fill="#fff" font-family="Arial,sans-serif" font-size="5.1" font-weight="700" text-anchor="middle">LINE</text></svg>
+                <span class="owner-profile__line-id">Rossukhon 123</span>
+              </a>
+              <a class="owner-profile__contact owner-profile__contact--tiktok" href="https://www.tiktok.com/@30263595297mod" target="_blank" rel="noopener noreferrer" aria-label="Visit the Moddee Shop TikTok shop: @30263595297mod" data-contact-detail="@30263595297mod" title="@30263595297mod">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15.9 4.1c.3 2 1.4 3.2 3.5 3.4v3.2a8 8 0 0 1-3.5-.9v6.1a5.8 5.8 0 1 1-5.8-5.8c.4 0 .8 0 1.2.1v3.4a2.6 2.6 0 1 0 1.5 2.3V4.1h3.1Z" fill="currentColor"/></svg>
+              </a>
+            </div>
+        </aside>
+      </section>
+
+      <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+        <div class="catalog__heading">
+          <div>
+            <h2 id="catalog-title" data-i18n="catalogTitle">สินค้าตัวอย่าง</h2>
+          </div>
+          <label class="sort-control">
+            <span data-i18n="sortLabel">เรียงตาม</span>
+            <select id="sort-select" aria-label="เรียงสินค้า">
+              <option value="featured" data-i18n="sortFeatured">แนะนำ</option>
+              <option value="price-low" data-i18n="sortPriceLow">ราคาต่ำไปสูง</option>
+              <option value="price-high" data-i18n="sortPriceHigh">ราคาสูงไปต่ำ</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="category-filters" role="group" aria-label="Filter products by category" id="category-filters">
+            <button type="button" class="filter-chip filter-chip--active" data-category="all" aria-pressed="true" data-i18n="filterAll">ทั้งหมด</button>
+            <button type="button" class="filter-chip" data-category="fashion" aria-pressed="false" data-i18n="filterFashion">แฟชั่น</button>
+            <button type="button" class="filter-chip" data-category="tech" aria-pressed="false" data-i18n="filterTech">อิเล็กทรอนิกส์</button>
+            <button type="button" class="filter-chip" data-category="beauty" aria-pressed="false" data-i18n="filterBeauty">ความงาม</button>
+            <button type="button" class="filter-chip" data-category="home" aria-pressed="false" data-i18n="filterHome">ของใช้ในบ้าน</button>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-state__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="21" cy="21" r="13" stroke="currentColor" stroke-width="2"/><path d="m31 31 9 9M15 21h12m-6-6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3 data-i18n="emptyTitle">ไม่พบสินค้าที่ค้นหา</h3>
+          <p data-i18n="emptyDescription">ลองใช้คำค้นหาอื่นหรือเลือกหมวดหมู่ใหม่</p>
+          <button type="button" class="empty-state__reset" id="reset-search" data-i18n="emptyReset">ล้างการค้นหา</button>
+        </div>
+      </section>
+
+      <section class="games" id="games" aria-labelledby="games-title">
+        <div class="games__heading">
+          <h2 id="games-title" data-i18n="gameTitle">เลือกเกมที่อยากเล่น</h2>
+          <p data-i18n="gameDescription">เกมสั้น ๆ เล่นได้ฟรี ไม่ต้องสมัครสมาชิก</p>
+        </div>
+        <div class="arcade-tabs" role="tablist" aria-label="Choose a game" data-i18n-aria-label="gameTablistLabel">
+          <button class="arcade-tab arcade-tab--active" id="star-game-tab" type="button" role="tab" aria-selected="true" aria-controls="star-game-panel" tabindex="0" data-i18n="gameTabStar">จับดาว</button>
+          <button class="arcade-tab" id="pinball-game-tab" type="button" role="tab" aria-selected="false" aria-controls="pinball-game-panel" tabindex="-1" data-i18n="gameTabPinball">พินบอลอวกาศ</button>
+          <button class="arcade-tab" id="bubble-game-tab" type="button" role="tab" aria-selected="false" aria-controls="bubble-game-panel" tabindex="-1" data-i18n="gameTabBubble">Bubble Pop</button>
+        </div>
+
+        <div class="arcade-panel" id="star-game-panel" role="tabpanel" aria-labelledby="star-game-tab">
+          <div class="signal-game">
+            <div class="signal-game__topline">
+              <div class="signal-game__stats">
+                <p><span data-i18n="gameScore">คะแนน</span><strong id="game-score">0</strong></p>
+                <p><span data-i18n="gameBest">คะแนนสูงสุด</span><strong id="game-best">0</strong></p>
+                <p><span data-i18n="gameTime">เวลา</span><strong><span id="game-time">20</span><span aria-hidden="true">s</span></strong></p>
+              </div>
+              <button class="game-reset" id="game-start" type="button" data-i18n="gameStart">เริ่มเล่น</button>
+            </div>
+            <p class="signal-game__status" id="game-status" aria-live="polite" aria-atomic="true" data-i18n="gameReady">กด «เริ่มเล่น» แล้วแตะดาวให้ไว!</p>
+            <div class="signal-game__board" id="signal-game-board" role="group" aria-label="Star signal game board">
+              <button class="signal-target" id="signal-target" type="button" aria-label="Catch the signal" disabled>
+                <span aria-hidden="true">✦</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="arcade-panel" id="pinball-game-panel" role="tabpanel" aria-labelledby="pinball-game-tab" hidden>
+          <div class="arcade-game">
+            <h3 data-i18n="pinballTitle">พินบอลนักบินอวกาศ</h3>
+            <div class="arcade-game__topline">
+              <div class="arcade-game__stats">
+                <p><span data-i18n="pinballScore">คะแนน</span><strong id="pinball-score">0</strong></p>
+                <p><span data-i18n="pinballBest">คะแนนสูงสุด</span><strong id="pinball-best">0</strong></p>
+                <p><span data-i18n="pinballBalls">ลูกบอล</span><strong id="pinball-balls">3</strong></p>
+              </div>
+              <button class="game-reset" id="pinball-launch" type="button" data-i18n="pinballStart">เริ่มเล่น</button>
+            </div>
+            <p class="arcade-game__status" id="pinball-status" aria-live="polite" aria-atomic="true" data-i18n="pinballReady">เริ่มเกมแล้วกด Space ปล่อยลูกบอล ใช้ปุ่มซ้าย/ขวาตีลูก</p>
+            <canvas class="arcade-canvas" id="pinball-canvas" width="720" height="480" tabindex="0" role="img" aria-label="Space pinball game"></canvas>
+            <div class="arcade-controls arcade-controls--pinball" aria-label="Pinball controls" data-i18n-aria-label="pinballControlsLabel">
+              <button class="arcade-control arcade-control--action" type="button" data-pinball-control="launch" aria-label="Launch ball" data-i18n-aria-label="pinballLaunch"><span aria-hidden="true">▲</span></button>
+              <button class="arcade-control" type="button" data-pinball-control="left" aria-label="Left flipper" data-i18n-aria-label="pinballLeft"><span aria-hidden="true">◀</span></button>
+              <button class="arcade-control" type="button" data-pinball-control="right" aria-label="Right flipper" data-i18n-aria-label="pinballRight"><span aria-hidden="true">▶</span></button>
+            </div>
+            <p class="arcade-game__hint" data-i18n="pinballHint">กด Space เพื่อยิงลูกบอล · ← / → หรือ Z / X เพื่อควบคุมแป้น</p>
+          </div>
+        </div>
+
+        <div class="arcade-panel" id="bubble-game-panel" role="tabpanel" aria-labelledby="bubble-game-tab" hidden>
+          <div class="arcade-game">
+            <h3 data-i18n="bubbleTitle">Bubble Pop · การผจญภัยบนแท่น</h3>
+            <div class="arcade-game__topline">
+              <div class="arcade-game__stats">
+                <p><span data-i18n="bubbleScore">النقاط</span><strong id="bubble-score">0</strong></p>
+                <p><span data-i18n="bubbleLives">القلوب</span><strong id="bubble-lives">3</strong></p>
+              </div>
+              <button class="game-reset" id="bubble-start" type="button" data-i18n="bubbleStart">ابدأ المغامرة</button>
+            </div>
+            <p class="arcade-game__status" id="bubble-status" aria-live="polite" aria-atomic="true" data-i18n="bubbleReady">เคลื่อนที่ กระโดด และยิงฟองเพื่อดักจับตัวประหลาด</p>
+            <canvas class="arcade-canvas" id="bubble-canvas" width="720" height="420" tabindex="0" role="img" aria-label="Bubble platform game"></canvas>
+            <div class="arcade-controls arcade-controls--bubble" aria-label="Bubble game controls" data-i18n-aria-label="bubbleControlsLabel">
+              <button class="arcade-control" type="button" data-bubble-control="left" aria-label="Move left" data-i18n-aria-label="bubbleLeft"><span aria-hidden="true">←</span></button>
+              <button class="arcade-control" type="button" data-bubble-control="right" aria-label="Move right" data-i18n-aria-label="bubbleRight"><span aria-hidden="true">→</span></button>
+              <button class="arcade-control" type="button" data-bubble-control="jump" aria-label="Jump" data-i18n-aria-label="bubbleJump"><span aria-hidden="true">↑</span></button>
+              <button class="arcade-control arcade-control--action" type="button" data-bubble-control="shoot" aria-label="Shoot a bubble" data-i18n-aria-label="bubbleShoot"><span aria-hidden="true">●</span></button>
+            </div>
+            <p class="arcade-game__hint" data-i18n="bubbleHint">ใช้ลูกศรเพื่อเดิน Space เพื่อกระโดด และ X เพื่อยิงฟองสบู่</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reseller-info" aria-labelledby="reseller-title">
+        <div class="reseller-info__copy">
+          <h2 id="reseller-title" data-i18n="resellerTitle">Join Moddee Shop as a reseller</h2>
+          <p data-i18n="resellerDescription">Interested in selling our products? Contact the shop to apply.</p>
+          <p class="reseller-info__note" data-i18n="resellerApproval">The shop selects sellers and provides accounts to approved resellers.</p>
+        </div>
+        <a class="reseller-info__button" href="mailto:Sticmod@hotmail.com?subject=Moddee%20Shop%20reseller%20application">
+          <span data-i18n="resellerCta">Ask about reselling</span>
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </section>
+
+      <section class="demo-note" aria-label="หมายเหตุแคตตาล็อกตัวอย่าง">
+        <span class="demo-note__icon" aria-hidden="true">i</span>
+        <p data-i18n="demoFooter">แคตตาล็อกนี้เป็นตัวอย่างสำหรับสาธิต รายการสินค้าและราคายังไม่ใช่ข้อเสนอขายจริง</p>
+        <span class="demo-note__english">SAMPLE CONTENT</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="#" aria-label="Moddee Shop home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="13" fill="var(--accent)"/><path d="M8.5 28V14.5h4.2l7.3 8 7.3-8h4.2V28h-5.2v-6.8L20 27.8l-6.3-6.6V28H8.5Z" fill="white"/></svg>
+        </span>
+        <span class="brand__wordmark">moddee<span>shop</span></span>
+      </a>
+      <div class="footer-group">
+        <h2 data-i18n="footerCustomerCare">บริการลูกค้า</h2>
+        <a href="#catalog" data-i18n="footerHowToBuy">เลือกชมสินค้า</a>
+        <a href="tracking.html" data-i18n="footerShipping">ติดตามการจัดส่ง</a>
+        <a class="footer-contact-link footer-contact-link--phone" href="tel:+66970730897" aria-label="Call Moddee Shop: 097-0730897" data-contact-detail="097-0730897" title="097-0730897">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.1 3.8 9.5 3c.7-.2 1.4.2 1.6.9l1 3.5c.2.6-.1 1.2-.6 1.6l-1.6 1.2a15 15 0 0 0 5 5l1.2-1.6c.4-.5 1-.7 1.6-.6l3.5 1c.7.2 1.1.9.9 1.6l-.8 2.4c-.3.8-1 1.3-1.9 1.3A16.2 16.2 0 0 1 4.5 5.7c0-.9.5-1.6 1.3-1.9l1.3-.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="footerPhone">097-0730897</span>
+        </a>
+        <a class="footer-contact-link footer-contact-link--email" href="mailto:Sticmod@hotmail.com" aria-label="Email Moddee Shop: Sticmod@hotmail.com" data-contact-detail="Sticmod@hotmail.com" title="Sticmod@hotmail.com">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7 7.5 5.5L19.5 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="footerEmail">ส่งอีเมลถึงร้าน</span>
+        </a>
+        <a class="footer-contact-link" href="https://wa.me/66970730897" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19.2 4.8A9.2 9.2 0 0 0 4.7 16l-1.2 4.3 4.4-1.1A9.2 9.2 0 1 0 19.2 4.8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.2 7.8c.3-.4.6-.4.9-.4h.3c.2 0 .4.1.5.4l.7 1.8c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4-.1.6.6 1.1 1.4 1.9 2.6 2.5.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .6-.3 1.3-.8 1.7-.5.5-1.3.7-2.1.6-1.2-.2-2.6-.8-4-2.1-1.5-1.4-2.5-3.1-2.8-4.3-.3-.9-.1-1.7.4-2.2Z" fill="currentColor"/></svg>
+          <span data-i18n="footerContact">تواصل عبر واتساب</span>
+        </a>
+        <a class="footer-contact-link footer-contact-link--line" href="https://line.me/R/ti/p/~Rossukhon%20123" target="_blank" rel="noopener noreferrer" aria-label="Add Rossukhon 123 on LINE" data-contact-detail="Rossukhon 123" title="Rossukhon 123">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11c0 4-3.6 7.2-8 7.2-.9 0-1.8-.1-2.6-.4L4 20l1.5-4A6.6 6.6 0 0 1 4 11c0-4 3.6-7.2 8-7.2s8 3.2 8 7.2Z" fill="#06c755"/><text x="12" y="13.8" fill="#fff" font-family="Arial,sans-serif" font-size="5.1" font-weight="700" text-anchor="middle">LINE</text></svg>
+          <span data-i18n="footerLine">LINE · Rossukhon 123</span>
+        </a>
+      </div>
+      <div class="footer-group">
+        <h2 data-i18n="footerAbout">เกี่ยวกับ Moddee Shop</h2>
+        <a href="#owner-profile" data-i18n="footerAboutShop">รู้จักร้าน</a>
+        <a href="mailto:Sticmod@hotmail.com?subject=Moddee%20Shop%20reseller%20application" data-i18n="footerReseller">สมัครเป็นตัวแทนจำหน่าย</a>
+        <a class="footer-contact-link footer-contact-link--tiktok" href="https://www.tiktok.com/@30263595297mod" target="_blank" rel="noopener noreferrer" aria-label="Visit Moddee Shop on TikTok: @30263595297mod" data-contact-detail="@30263595297mod" title="@30263595297mod">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.9 4.1c.3 2 1.4 3.2 3.5 3.4v3.2a8 8 0 0 1-3.5-.9v6.1a5.8 5.8 0 1 1-5.8-5.8c.4 0 .8 0 1.2.1v3.4a2.6 2.6 0 1 0 1.5 2.3V4.1h3.1Z" fill="currentColor"/></svg>
+          <span data-i18n="footerTikTok">ร้าน Moddee บน TikTok</span>
+        </a>
+      </div>
+      <p class="site-footer__note" data-i18n="footerNote">ตัวอย่างร้านค้าออนไลน์สองภาษา · ไทย / English</p>
+      <span class="site-footer__copyright">© <span id="current-year"></span> Moddee Shop</span>
+    </footer>
+
+    <div class="chat-widget" id="chat-widget">
+      <section class="chat-panel" id="chat-panel" aria-labelledby="chat-title" hidden>
+        <header class="chat-panel__header">
+          <div class="chat-panel__identity">
+            <span class="chat-panel__avatar" aria-hidden="true">M</span>
+            <div>
+              <h2 id="chat-title" data-i18n="chatTitle">ผู้ช่วยร้าน Moddee</h2>
+              <p data-i18n="chatSubtitle">ผู้ช่วย AI · พร้อมช่วยเหลือ</p>
+            </div>
+          </div>
+          <button class="chat-panel__close" id="chat-close" type="button" aria-label="ปิดแชท" data-i18n-aria-label="chatClose">×</button>
+        </header>
+        <div class="chat-panel__messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="محادثة مع مساعد Moddee Shop"></div>
+        <p class="chat-panel__privacy" data-i18n="chatPrivacy">لا ترسل معلومات الدفع أو عنوانك هنا. تواصل مع المتجر عبر WhatsApp لتأكيد الطلبات.</p>
+        <form class="chat-panel__form" id="chat-form">
+          <label class="sr-only" for="chat-input" data-i18n="chatInputLabel">اكتب سؤالك</label>
+          <textarea id="chat-input" rows="1" maxlength="1200" placeholder="اكتب سؤالك..." data-i18n-placeholder="chatPlaceholder" required></textarea>
+          <button class="chat-panel__send" id="chat-send" type="submit" aria-label="إرسال" data-i18n-aria-label="chatSend">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m4 12 16-8-5.3 16-3.1-6-7.6-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="m11.6 14 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+        </form>
+      </section>
+      <button class="chat-launcher" id="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="اسأل مساعد Moddee Shop" data-i18n-aria-label="chatOpen">
+        <svg class="chat-launcher__icon chat-launcher__icon--open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2 1-4.2A7.5 7.5 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 11.5h8M8 14.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="chat-launcher__icon chat-launcher__icon--close" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span data-i18n="chatOpen">اسأل مساعد Moddee</span>
+      </button>
+    </div>
+
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+      <button class="product-dialog__close" id="dialog-close" type="button" aria-label="Close product details">×</button>
+      <img class="product-dialog__image" id="dialog-image" src="/images/watch.jpg" alt="Sample watch">
+      <div class="product-dialog__content">
+        <span class="product-dialog__tag" data-i18n="sampleItem">สินค้าตัวอย่าง</span>
+        <p class="product-dialog__category" id="dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="product-dialog__description" id="dialog-description"></p>
+        <p class="product-dialog__price" id="dialog-price"></p>
+        <p class="product-dialog__disclaimer" data-i18n="dialogDisclaimer">ราคาเป็นตัวอย่างเท่านั้น ยังไม่เปิดรับคำสั่งซื้อ</p>
+      </div>
+    </dialog>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

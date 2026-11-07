@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f8fb">
+    <title>งานจัดส่ง | Moddee Shop</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='13' fill='%23087da4'/%3E%3Cpath d='M9 29V15h4l7 8 7-8h4v14h-5v-7l-6 7-6-7v7z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="delivery.css">
+  </head>
+  <body class="delivery-page">
+    <header class="delivery-header">
+      <a class="brand" href="index.html" aria-label="Moddee Shop">
+        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="13" fill="#087da4"/><path d="M8.5 28V14.5h4.2l7.3 8 7.3-8h4.2V28h-5.2v-6.8L20 27.8l-6.3-6.6V28H8.5Z" fill="white"/></svg></span>
+        <span class="brand__wordmark">moddee<span>shop</span></span>
+      </a>
+      <div class="delivery-header__actions">
+        <button class="delivery-language" type="button" data-language-switch aria-label="Switch language"></button>
+        <a class="delivery-home" href="index.html" data-copy="home">กลับหน้าร้าน</a>
+      </div>
+    </header>
+
+    <main class="delivery-main">
+      <section class="delivery-intro">
+        <h1 data-copy="driverTitle">งานจัดส่งของฉัน</h1>
+        <p data-copy="driverIntro">รับงาน แล้วกดเริ่มแชร์ GPS เมื่อพร้อมออกส่ง</p>
+      </section>
+      <p class="delivery-message" data-setup-notice hidden role="status"></p>
+      <section class="delivery-auth" id="auth-panel" data-requires-supabase>
+        <form class="delivery-form" id="login-form">
+          <label for="login-email" data-copy="emailLabel">อีเมลบัญชีที่ร้านอนุมัติแล้ว</label>
+          <div class="delivery-form__row">
+            <input id="login-email" type="email" autocomplete="email" required data-copy-placeholder="emailPlaceholder">
+            <button type="submit" class="delivery-button" data-copy="sendMagicLink">ส่งลิงก์เข้าสู่ระบบ</button>
+          </div>
+        </form>
+        <p class="delivery-message" id="auth-message" hidden role="status"></p>
+      </section>
+      <section class="delivery-workspace" id="courier-workspace" data-requires-supabase hidden>
+        <div class="delivery-workspace__heading">
+          <p id="signed-in-email"></p>
+          <button class="delivery-button delivery-button--quiet" id="sign-out" type="button" data-copy="signOut">ออกจากระบบ</button>
+        </div>
+        <p class="delivery-message delivery-message--privacy" data-copy="gpsConsent">กด «เริ่มแชร์ GPS» เพื่ออนุญาตให้เบราว์เซอร์ใช้ตำแหน่งของคุณ</p>
+        <p class="delivery-message" id="auth-message" hidden role="status"></p>
+        <section class="delivery-orders" aria-labelledby="courier-orders-title">
+          <div class="delivery-orders__heading">
+            <h2 id="courier-orders-title" data-copy="orderList">รายการจัดส่ง</h2>
+            <button class="delivery-button delivery-button--quiet" id="refresh-orders" type="button" aria-label="Refresh deliveries">↻</button>
+          </div>
+          <div id="orders-list"></div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="/src/courier.js"></script>
+  </body>
+</html>

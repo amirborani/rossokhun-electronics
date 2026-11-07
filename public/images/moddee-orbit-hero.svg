@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" fill="none">
+  <defs>
+    <radialGradient id="planet" cx="0" cy="0" r="1" gradientTransform="matrix(268 280 -252 242 1035 245)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset=".47" stop-color="#f8e6ec"/>
+      <stop offset="1" stop-color="#cce4ce"/>
+    </radialGradient>
+    <linearGradient id="orbit" x1="726" x2="1350" y1="209" y2="519" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#cce4ce" stop-opacity=".12"/>
+      <stop offset=".51" stop-color="#c45c83" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#6fa578" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="811" x2="1450" y1="606" y2="285" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#eff5ed" stop-opacity=".15"/>
+      <stop offset=".54" stop-color="#bfd8c2"/>
+      <stop offset="1" stop-color="#fbf5f5" stop-opacity=".2"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" stroke="#91b894" stroke-opacity=".17"/>
+    </pattern>
+    <filter id="softGlow" x="666" y="46" width="766" height="646" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="760" fill="#f7faf6"/>
+  <rect width="1440" height="760" fill="url(#grid)"/>
+  <path d="M0 694h1440" stroke="#d9e7da"/>
+  <ellipse cx="1061" cy="357" rx="339" ry="278" fill="#d98ca8" fill-opacity=".13" filter="url(#softGlow)"/>
+  <circle cx="1068" cy="343" r="204" fill="url(#planet)" stroke="#fff" stroke-opacity=".9" stroke-width="2"/>
+  <path d="M866 346c94 77 236 114 402 93" stroke="#9cc5a2" stroke-opacity=".76" stroke-width="2"/>
+  <path d="M892 422c100 48 216 60 345 29" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M1009 146c104 111 156 258 155 439" stroke="#fff" stroke-opacity=".76" stroke-width="2"/>
+  <path d="M805 353c120-176 362-244 556-155 194 88 277 282 169 426-108 144-425 200-662 81" stroke="url(#orbit)" stroke-width="3"/>
+  <path d="M850 283c156-153 420-192 616-78" stroke="#fff" stroke-opacity=".74" stroke-width="2"/>
+  <path d="M818 596c121-87 294-125 463-98 80 13 142 37 199 73" stroke="url(#horizon)" stroke-width="26"/>
+  <path d="M818 596c121-87 294-125 463-98 80 13 142 37 199 73" stroke="#fff" stroke-opacity=".74" stroke-width="2"/>
+  <g stroke="#77a67b" stroke-width="2">
+    <path d="M1176 128v26m-13-13h26"/>
+    <path d="M1361 376v20m-10-10h20"/>
+    <path d="M849 184v18m-9-9h18"/>
+    <path d="M1284 587v18m-9-9h18"/>
+  </g>
+  <g fill="#fff" stroke="#a95778" stroke-width="2">
+    <circle cx="846" cy="410" r="7"/>
+    <circle cx="1274" cy="249" r="6"/>
+    <circle cx="1184" cy="550" r="8"/>
+    <circle cx="1408" cy="287" r="5"/>
+  </g>
+  <g transform="translate(1275 214)">
+    <path d="M0 18 42 0l-10 42L0 18Z" fill="#fff" stroke="#a9476d" stroke-width="2"/>
+    <path d="m13 13 17-7-7 17-10-10Z" fill="#68a778"/>
+    <path d="M-26 13h20M48 13h20M12-19v15m0 48v15" stroke="#77a67b" stroke-width="2"/>
+  </g>
+  <g fill="#76a97f">
+    <circle cx="732" cy="259" r="3"/>
+    <circle cx="780" cy="493" r="2"/>
+    <circle cx="1303" cy="128" r="3"/>
+    <circle cx="1396" cy="533" r="2"/>
+    <circle cx="1204" cy="640" r="3"/>
+    <circle cx="925" cy="104" r="2"/>
+  </g>
+  <path d="M0 0h8v760H0z" fill="#c45c83" opacity=".8"/>
+</svg>
