@@ -850,34 +850,17 @@ main { padding-top: 20px; }
 .games__heading { margin-bottom: 16px; }
 .games__heading h2 { margin: 0; color: var(--ink); font-size: 23px; font-weight: 800; letter-spacing: -.035em; }
 .games__heading p { margin: 5px 0 0; color: var(--secondary-copy); font-size: 13px; }
-.signal-game { padding: 18px; border: 1px solid var(--silver-panel); border-radius: 5px; background: var(--surface); box-shadow: 0 5px 16px rgb(32 55 40 / 7%); }
-.signal-game__topline { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.signal-game__stats { display: flex; flex-wrap: wrap; gap: clamp(12px, 3vw, 28px); }
-.signal-game__stats p { display: grid; gap: 2px; margin: 0; color: var(--secondary-copy); font-size: 11px; }
-.signal-game__stats strong { color: var(--ink); font-size: 18px; font-variant-numeric: tabular-nums; line-height: 1.2; }
 .game-reset { min-height: 38px; flex: 0 0 auto; padding: 7px 14px; border: 1px solid var(--accent); border-radius: 4px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; cursor: pointer; transition: background .16s ease, transform .16s ease; }
 .game-reset:hover { transform: translateY(-1px); background: var(--accent-dark); }
 .game-reset:disabled { border-color: var(--line); background: var(--ice); color: var(--muted); cursor: default; transform: none; }
-.game-reset:focus-visible, .signal-target:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
-.signal-game__status { min-height: 20px; margin: 15px 0 0; color: var(--accent-dark); font-size: 12px; font-weight: 700; }
-.signal-game__board { display: grid; grid-template: repeat(3, minmax(0, 1fr)) / repeat(4, minmax(0, 1fr)); gap: clamp(4px, 1vw, 10px); width: min(100%, 720px); aspect-ratio: 4 / 3; margin: 10px auto 0; padding: clamp(10px, 2vw, 20px); overflow: hidden; border: 1px solid var(--silver-deep); border-radius: 5px; background-color: var(--hero-canvas); background-image: radial-gradient(ellipse at center, transparent 38%, rgb(85 149 104 / 36%) 38.3%, rgb(85 149 104 / 36%) 38.7%, transparent 39%), linear-gradient(rgb(85 149 104 / 16%) 1px, transparent 1px), linear-gradient(90deg, rgb(85 149 104 / 16%) 1px, transparent 1px); background-size: 100% 100%, 25% 33.333%, 25% 33.333%; }
-.signal-target { display: grid; width: 100%; height: 100%; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--accent); cursor: pointer; transition: transform .12s ease; }
-.signal-target:hover:not(:disabled) { transform: scale(1.08); }
-.signal-target span { display: grid; width: min(72%, 84px); aspect-ratio: 1; place-items: center; border: 2px solid var(--signal); border-radius: 50%; background: rgb(255 255 255 / 90%); box-shadow: 0 4px 14px rgb(32 55 40 / 18%); color: var(--accent-dark); font-size: clamp(22px, 4vw, 38px); }
-.signal-target:disabled { cursor: default; }
+.game-reset:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
 
 @media (max-width: 620px) {
   .games { padding-top: 26px; }
   .games__heading { margin-bottom: 12px; }
   .games__heading h2 { font-size: 21px; }
   .games__heading p { font-size: 12px; }
-  .signal-game { padding: 12px; }
-  .signal-game__topline { align-items: flex-end; gap: 10px; }
-  .signal-game__stats { gap: 14px; }
-  .signal-game__stats p { font-size: 10px; }
-  .signal-game__stats strong { font-size: 16px; }
   .game-reset { min-height: 36px; padding-inline: 10px; font-size: 11px; }
-  .signal-game__board { aspect-ratio: 4 / 3; }
 }
 
 .chat-widget { position: relative; z-index: 30; }
@@ -1126,27 +1109,10 @@ select:focus-visible { outline-color: #a40f47; }
 .product-dialog__price { color: #c20f50; }
 .games__heading h2 { color: #a7134b; }
 .games__heading p { color: #76203f; }
-.signal-game { border-color: #e3a8bd; border-radius: 3px; background: #fffafd; }
-.signal-game__stats p { color: #76203f; }
-.signal-game__stats strong { color: #641632; }
 .game-reset { border-color: #a7134b; border-radius: 2px; background: #c81151; }
 .game-reset:hover { background: #8f1642; }
 .game-reset:disabled { border-color: #efc8d6; background: #fff1f6; color: #862449; }
-.game-reset:focus-visible,
-.signal-target:focus-visible { outline-color: #a40f47; }
-.signal-game__status { color: #8f1642; }
-.signal-game__board {
-  border-color: #d993ad;
-  border-radius: 3px;
-  background-color: #fce8ef;
-  background-image:
-    url("/images/moddee-japanese-tattoo-pattern.svg"),
-    linear-gradient(#d4145a1a 1px, transparent 1px),
-    linear-gradient(90deg, #d4145a1a 1px, transparent 1px);
-  background-size: 220px 220px, 25% 33.333%, 25% 33.333%;
-}
-.signal-target { color: #d4145a; }
-.signal-target span { border-color: #c81151; color: #941342; }
+.game-reset:focus-visible { outline-color: #a40f47; }
 .chat-panel { border-color: #d993ad; border-radius: 5px; }
 .chat-panel__header { background: #ffe7f0; }
 .chat-panel__identity h2 { color: #641632; }
@@ -1175,30 +1141,6 @@ select:focus-visible { outline-color: #a40f47; }
   }
 }
 
-.arcade-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.arcade-tab {
-  min-height: 38px;
-  padding: 7px 14px;
-  border: 1px solid #d993ad;
-  border-radius: 2px;
-  background: #fffafd;
-  color: #76203f;
-  font-size: 12px;
-  font-weight: 800;
-  cursor: pointer;
-}
-.arcade-tab:hover,
-.arcade-tab--active {
-  border-color: #8e1743;
-  background: #c81151;
-  color: #fff;
-}
-.arcade-panel[hidden] { display: none; }
 .arcade-game {
   padding: clamp(12px, 2.5vw, 20px);
   border: 1px solid #d993ad;
@@ -1206,7 +1148,6 @@ select:focus-visible { outline-color: #a40f47; }
   background: #fffafd;
   box-shadow: 0 5px 16px rgb(92 13 42 / 10%);
 }
-.arcade-game h3 { margin: 0 0 10px; color: #a7134b; font-size: 18px; font-weight: 800; }
 .arcade-game__topline { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .arcade-game__stats { display: flex; flex-wrap: wrap; gap: clamp(14px, 4vw, 32px); }
 .arcade-game__stats p { display: grid; gap: 2px; margin: 0; color: #76203f; font-size: 11px; }
@@ -1223,7 +1164,6 @@ select:focus-visible { outline-color: #a40f47; }
 }
 .arcade-canvas:focus-visible { outline: 3px solid #a40f47; outline-offset: 3px; }
 .arcade-controls { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
-.arcade-controls--pinball { justify-content: space-between; width: min(100%, 720px); margin-inline: auto; }
 .arcade-control {
   display: grid;
   width: 54px;
@@ -1244,9 +1184,6 @@ select:focus-visible { outline-color: #a40f47; }
 .arcade-game__hint { margin: 10px 0 0; color: #76203f; font-size: 11px; text-align: center; }
 
 @media (max-width: 620px) {
-  .arcade-tabs { gap: 6px; }
-  .arcade-tab { min-height: 35px; padding-inline: 10px; font-size: 10px; }
-  .arcade-game h3 { font-size: 16px; }
   .arcade-game__topline { align-items: flex-end; gap: 10px; }
   .arcade-game__stats { gap: 16px; }
   .arcade-game__stats p { font-size: 10px; }

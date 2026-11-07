@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Moddee Shop">
     <meta property="og:title" content="Moddee Shop | Everyday finds">
-    <meta property="og:description" content="Browse the Moddee Shop catalog, discover the owner profile, and enjoy original arcade games.">
+    <meta property="og:description" content="Browse the Moddee Shop catalog, discover the owner profile, and enjoy the original Bubble Pop game.">
     <meta name="twitter:card" content="summary">
     <title>Moddee Shop | Everyday finds</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23d4145a'/%3E%3Cpath d='M9 29V15h4l7 8 7-8h4v14h-5v-7l-6 7-6-7v7z' fill='white'/%3E%3C/svg%3E">
@@ -19,7 +19,7 @@
     OWN-WORLD: Saturated sakura pink, plum-black ink, original wave and peony linework, and crisp paper-like panels.
     STORY: Visitors find sample products, meet the owner, and reach the shop while clearly seeing that catalog items are examples.
     FIRST VIEWPORT: A pink inked masthead frames search; the patterned hero pairs the shop invitation with the owner's portrait and contact icons.
-    FORM: User-pinned Japanese tattoo-print world; grounded seed 63cd33d1 yielded an unrelated alternative, so the pinned brief wins. A responsive paper-panel catalog carries the visitor from the patterned hero into three selectable local games. -->
+    FORM: User-pinned Japanese tattoo-print world; grounded seed 63cd33d1 yielded an unrelated alternative, so the pinned brief wins. A responsive paper-panel catalog leads from the patterned hero into the Bubble Pop mini-game. -->
     <div class="demo-banner">
       <span class="demo-banner__dot" aria-hidden="true"></span>
       <span data-i18n="demoNotice">عرض تجريبي · المنتجات والأثمنة أمثلة فقط</span>
@@ -166,59 +166,11 @@
 
       <section class="games" id="games" aria-labelledby="games-title">
         <div class="games__heading">
-          <h2 id="games-title" data-i18n="gameTitle">เลือกเกมที่อยากเล่น</h2>
+          <h2 id="games-title" data-i18n="gameTitle">Bubble Pop</h2>
           <p data-i18n="gameDescription">เกมสั้น ๆ เล่นได้ฟรี ไม่ต้องสมัครสมาชิก</p>
         </div>
-        <div class="arcade-tabs" role="tablist" aria-label="Choose a game" data-i18n-aria-label="gameTablistLabel">
-          <button class="arcade-tab arcade-tab--active" id="star-game-tab" type="button" role="tab" aria-selected="true" aria-controls="star-game-panel" tabindex="0" data-i18n="gameTabStar">จับดาว</button>
-          <button class="arcade-tab" id="pinball-game-tab" type="button" role="tab" aria-selected="false" aria-controls="pinball-game-panel" tabindex="-1" data-i18n="gameTabPinball">พินบอลอวกาศ</button>
-          <button class="arcade-tab" id="bubble-game-tab" type="button" role="tab" aria-selected="false" aria-controls="bubble-game-panel" tabindex="-1" data-i18n="gameTabBubble">Bubble Pop</button>
-        </div>
-
-        <div class="arcade-panel" id="star-game-panel" role="tabpanel" aria-labelledby="star-game-tab">
-          <div class="signal-game">
-            <div class="signal-game__topline">
-              <div class="signal-game__stats">
-                <p><span data-i18n="gameScore">คะแนน</span><strong id="game-score">0</strong></p>
-                <p><span data-i18n="gameBest">คะแนนสูงสุด</span><strong id="game-best">0</strong></p>
-                <p><span data-i18n="gameTime">เวลา</span><strong><span id="game-time">20</span><span aria-hidden="true">s</span></strong></p>
-              </div>
-              <button class="game-reset" id="game-start" type="button" data-i18n="gameStart">เริ่มเล่น</button>
-            </div>
-            <p class="signal-game__status" id="game-status" aria-live="polite" aria-atomic="true" data-i18n="gameReady">กด «เริ่มเล่น» แล้วแตะดาวให้ไว!</p>
-            <div class="signal-game__board" id="signal-game-board" role="group" aria-label="Star signal game board">
-              <button class="signal-target" id="signal-target" type="button" aria-label="Catch the signal" disabled>
-                <span aria-hidden="true">✦</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="arcade-panel" id="pinball-game-panel" role="tabpanel" aria-labelledby="pinball-game-tab" hidden>
+        <div id="bubble-game-panel">
           <div class="arcade-game">
-            <h3 data-i18n="pinballTitle">พินบอลนักบินอวกาศ</h3>
-            <div class="arcade-game__topline">
-              <div class="arcade-game__stats">
-                <p><span data-i18n="pinballScore">คะแนน</span><strong id="pinball-score">0</strong></p>
-                <p><span data-i18n="pinballBest">คะแนนสูงสุด</span><strong id="pinball-best">0</strong></p>
-                <p><span data-i18n="pinballBalls">ลูกบอล</span><strong id="pinball-balls">3</strong></p>
-              </div>
-              <button class="game-reset" id="pinball-launch" type="button" data-i18n="pinballStart">เริ่มเล่น</button>
-            </div>
-            <p class="arcade-game__status" id="pinball-status" aria-live="polite" aria-atomic="true" data-i18n="pinballReady">เริ่มเกมแล้วกด Space ปล่อยลูกบอล ใช้ปุ่มซ้าย/ขวาตีลูก</p>
-            <canvas class="arcade-canvas" id="pinball-canvas" width="720" height="480" tabindex="0" role="img" aria-label="Space pinball game"></canvas>
-            <div class="arcade-controls arcade-controls--pinball" aria-label="Pinball controls" data-i18n-aria-label="pinballControlsLabel">
-              <button class="arcade-control arcade-control--action" type="button" data-pinball-control="launch" aria-label="Launch ball" data-i18n-aria-label="pinballLaunch"><span aria-hidden="true">▲</span></button>
-              <button class="arcade-control" type="button" data-pinball-control="left" aria-label="Left flipper" data-i18n-aria-label="pinballLeft"><span aria-hidden="true">◀</span></button>
-              <button class="arcade-control" type="button" data-pinball-control="right" aria-label="Right flipper" data-i18n-aria-label="pinballRight"><span aria-hidden="true">▶</span></button>
-            </div>
-            <p class="arcade-game__hint" data-i18n="pinballHint">กด Space เพื่อยิงลูกบอล · ← / → หรือ Z / X เพื่อควบคุมแป้น</p>
-          </div>
-        </div>
-
-        <div class="arcade-panel" id="bubble-game-panel" role="tabpanel" aria-labelledby="bubble-game-tab" hidden>
-          <div class="arcade-game">
-            <h3 data-i18n="bubbleTitle">Bubble Pop · การผจญภัยบนแท่น</h3>
             <div class="arcade-game__topline">
               <div class="arcade-game__stats">
                 <p><span data-i18n="bubbleScore">النقاط</span><strong id="bubble-score">0</strong></p>

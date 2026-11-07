@@ -82,7 +82,7 @@ The orbital drawing is atmosphere, not a claim about the shop, its location, pro
 **Key Characteristics:**
 - Bright pearl-white surfaces, soft leafy greens, saturated pink actions, and deep green ink.
 - Orbital linework is an original vector illustration, not interactive data.
-- A quick local star-signal game gives visitors a playful break without implying purchases, accounts, or online multiplayer.
+- An original local Bubble Pop platform game gives visitors a playful break without implying purchases, accounts, or online multiplayer.
 - Sample products, prices, shop contacts, and backend requirements remain truthful and visible.
 
 ## Colors

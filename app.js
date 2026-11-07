@@ -121,48 +121,8 @@ const translations = {
     chatGenericError: "เชื่อมต่อไม่ได้ ลองอีกครั้งหรือติดต่อร้านทาง WhatsApp",
     catalogEyebrow: "เลือกดูในแบบที่ชอบ",
     catalogTitle: "สินค้าตัวอย่าง",
-    gameTitle: "เลือกเกมที่อยากเล่น",
+    gameTitle: "Bubble Pop",
     gameDescription: "เกมสั้น ๆ เล่นได้ฟรี ไม่ต้องสมัครสมาชิก",
-    gameTablistLabel: "เลือกเกม",
-    gameTabStar: "จับดาว",
-    gameTabPinball: "พินบอลอวกาศ",
-    gameTabBubble: "Bubble Pop",
-    gameScore: "คะแนน",
-    gameBest: "คะแนนสูงสุด",
-    gameTime: "เวลา",
-    gameStart: "เริ่มเล่น",
-    gameRunning: "กำลังเล่น…",
-    gameRestart: "เล่นอีกครั้ง",
-    gameReady: "กด «เริ่มเล่น» แล้วแตะสัญญาณดาวให้ไว!",
-    gamePlaying: "จับสัญญาณให้ทันก่อนหมดเวลา!",
-    gameFinished: (score) => `หมดเวลาแล้ว! จับสัญญาณได้ ${score} ครั้ง`,
-    gameNewRecord: "สุดยอด! สถิติใหม่ของคุณ",
-    gameCatchTarget: "จับสัญญาณดาว",
-    gameBoardLabel: "กระดานเกมจับสัญญาณดาว",
-    gameScoreLabel: (score) => `คะแนน ${score}`,
-    gameTimeLabel: (seconds) => `เหลือ ${seconds} วินาที`,
-    gameBestLabel: (score) => `คะแนนสูงสุด ${score}`,
-    pinballTitle: "พินบอลอวกาศ",
-    pinballScore: "คะแนน",
-    pinballBest: "คะแนนสูงสุด",
-    pinballBalls: "ลูกบอล",
-    pinballStart: "เริ่มเล่น",
-    pinballLaunch: "ปล่อยลูกบอล",
-    pinballRestart: "เล่นอีกครั้ง",
-    pinballRunning: "กำลังเล่น…",
-    pinballReady: "กดเริ่มเกมแล้วกด Space เพื่อปล่อยลูกบอล ใช้ปุ่มซ้าย/ขวาตีลูก",
-    pinballPlaying: "เล็งแป้นให้ดี แล้วตีลูกกลับไปชนเป้า!",
-    pinballBallLost: (balls) => `เสียลูกบอลแล้ว · เหลืออีก ${balls} ลูก`,
-    pinballGameOver: (score) => `จบเกม! คะแนนของคุณ ${score}`,
-    pinballControlsLabel: "ปุ่มควบคุมพินบอล",
-    pinballLeft: "แป้นพินบอลซ้าย",
-    pinballRight: "แป้นพินบอลขวา",
-    pinballHint: "กด Space เพื่อยิงลูกบอล · ← / → หรือ Z / X เพื่อควบคุมแป้น",
-    pinballCanvasLabel: "เกมพินบอลอวกาศ",
-    pinballScoreLabel: (score) => `คะแนน ${score}`,
-    pinballBestLabel: (score) => `คะแนนสูงสุด ${score}`,
-    pinballBallsLabel: (balls) => `เหลือลูกบอล ${balls} ลูก`,
-    bubbleTitle: "Bubble Pop · การผจญภัยบนแท่น",
     bubbleScore: "คะแนน",
     bubbleLives: "หัวใจ",
     bubbleStart: "เริ่มการผจญภัย",
@@ -276,48 +236,8 @@ const translations = {
     chatGenericError: "I couldn't connect. Please try again or contact the shop on WhatsApp.",
     catalogEyebrow: "Find something you like",
     catalogTitle: "Sample products",
-    gameTitle: "Choose a game",
-    gameDescription: "Quick, free mini-games. No account needed.",
-    gameTablistLabel: "Choose a game",
-    gameTabStar: "Star dash",
-    gameTabPinball: "Space pinball",
-    gameTabBubble: "Bubble Pop",
-    gameScore: "Score",
-    gameBest: "Best",
-    gameTime: "Time",
-    gameStart: "Start game",
-    gameRunning: "Playing…",
-    gameRestart: "Play again",
-    gameReady: "Press “Start game” and get ready to catch the signal!",
-    gamePlaying: "Catch the moving signal before time runs out!",
-    gameFinished: (score) => `Time's up! You caught ${score} signals.`,
-    gameNewRecord: "Amazing! A new personal best.",
-    gameCatchTarget: "Catch the star signal",
-    gameBoardLabel: "Star signal game board",
-    gameScoreLabel: (score) => `Score ${score}`,
-    gameTimeLabel: (seconds) => `${seconds} seconds left`,
-    gameBestLabel: (score) => `Best score ${score}`,
-    pinballTitle: "Space pinball",
-    pinballScore: "Score",
-    pinballBest: "Best",
-    pinballBalls: "Balls",
-    pinballStart: "Start pinball",
-    pinballLaunch: "Launch ball",
-    pinballRestart: "Play again",
-    pinballRunning: "Playing…",
-    pinballReady: "Start the table, then press Space to launch. Use the left and right flippers.",
-    pinballPlaying: "Time your flippers and send the ball into the targets!",
-    pinballBallLost: (balls) => `Ball drained · ${balls} ${balls === 1 ? "ball" : "balls"} left`,
-    pinballGameOver: (score) => `Game over! Your score: ${score}`,
-    pinballControlsLabel: "Pinball controls",
-    pinballLeft: "Left pinball flipper",
-    pinballRight: "Right pinball flipper",
-    pinballHint: "Press Space to launch · ← / → or Z / X to control the flippers",
-    pinballCanvasLabel: "Space pinball table game",
-    pinballScoreLabel: (score) => `Score ${score}`,
-    pinballBestLabel: (score) => `Best score ${score}`,
-    pinballBallsLabel: (balls) => `${balls} balls remaining`,
-    bubbleTitle: "Bubble Pop · Platform adventure",
+    gameTitle: "Bubble Pop",
+    gameDescription: "A quick, free game. No account needed.",
     bubbleScore: "Score",
     bubbleLives: "Hearts",
     bubbleStart: "Start adventure",
@@ -371,35 +291,6 @@ const translations = {
 };
 
 const state = { language: localStorage.getItem("moddee-language") === "en" ? "en" : "th", category: "all", query: "", sort: "featured" };
-const storedBestScore = Number(localStorage.getItem("moddee-star-game-best") || 0);
-const storedPinballBestScore = Number(localStorage.getItem("moddee-pinball-game-best") || 0);
-const gameState = {
-  score: 0,
-  bestScore: Number.isFinite(storedBestScore) && storedBestScore > 0 ? storedBestScore : 0,
-  secondsLeft: 20,
-  targetPosition: 5,
-  running: false,
-  newRecord: false,
-  timer: null,
-};
-const pinballGameState = {
-  score: 0,
-  bestScore: Number.isFinite(storedPinballBestScore) && storedPinballBestScore > 0 ? storedPinballBestScore : 0,
-  balls: 3,
-  running: false,
-  hasPlayed: false,
-  ballLost: false,
-  ball: { x: 650, y: 430, vx: 0, vy: 0, radius: 9, launched: false },
-  leftFlipper: false,
-  rightFlipper: false,
-  bumpers: [
-    { x: 260, y: 105, radius: 25, pulse: 0 },
-    { x: 450, y: 118, radius: 25, pulse: 0 },
-    { x: 355, y: 200, radius: 29, pulse: 0 },
-  ],
-  lastFrame: 0,
-  frameId: 0,
-};
 const bubbleGameState = {
   score: 0,
   lives: 3,
@@ -416,11 +307,8 @@ const bubbleGameState = {
   enemies: [],
   bubbles: [],
 };
-const pinballCanvas = document.querySelector("#pinball-canvas");
-const pinballContext = pinballCanvas.getContext("2d");
 const bubbleCanvas = document.querySelector("#bubble-canvas");
 const bubbleContext = bubbleCanvas.getContext("2d");
-let activeArcadeTab = "star";
 const chatState = { history: [], busy: false, initialized: false };
 const chatPanel = document.querySelector("#chat-panel");
 const chatMessages = document.querySelector("#chat-messages");
@@ -492,16 +380,7 @@ function applyTranslations() {
   document.querySelector("#sort-select").setAttribute("aria-label", text.sortControlLabel);
   document.querySelector(".demo-note").setAttribute("aria-label", text.demoNoteLabel);
   document.querySelector("#dialog-close").setAttribute("aria-label", text.closeProduct);
-  document.querySelector("#signal-game-board").setAttribute("aria-label", text.gameBoardLabel);
-  document.querySelector("#game-score").setAttribute("aria-label", text.gameScoreLabel(gameState.score));
-  document.querySelector("#game-best").setAttribute("aria-label", text.gameBestLabel(gameState.bestScore));
-  document.querySelector("#game-time").setAttribute("aria-label", text.gameTimeLabel(gameState.secondsLeft));
-  document.querySelector("#signal-target").setAttribute("aria-label", text.gameCatchTarget);
-  document.querySelector("#pinball-canvas").setAttribute("aria-label", text.pinballCanvasLabel);
   document.querySelector("#bubble-canvas").setAttribute("aria-label", text.bubbleCanvasLabel);
-  document.querySelector("#pinball-score").setAttribute("aria-label", text.pinballScoreLabel(pinballGameState.score));
-  document.querySelector("#pinball-best").setAttribute("aria-label", text.pinballBestLabel(pinballGameState.bestScore));
-  document.querySelector("#pinball-balls").setAttribute("aria-label", text.pinballBallsLabel(pinballGameState.balls));
   document.querySelector("#bubble-score").setAttribute("aria-label", text.bubbleScoreLabel(bubbleGameState.score));
   document.querySelector("#bubble-lives").setAttribute("aria-label", text.bubbleLivesLabel(bubbleGameState.lives));
   document.querySelector("#chat-messages").setAttribute("aria-label", text.chatLog);
@@ -513,8 +392,6 @@ function applyTranslations() {
   document.querySelector(".owner-profile__photo").alt = text.ownerAlt;
   document.querySelector("#result-count").textContent = text.resultCount(getFilteredProducts().length);
   renderProducts();
-  renderSignalGame();
-  renderPinballGame();
   renderBubbleGame();
   if (chatState.initialized && chatState.history.length === 1) {
     const greeting = chatMessages.querySelector(".chat-message--assistant .chat-message__text");
@@ -578,34 +455,6 @@ function setCategory(category) {
   renderProducts();
 }
 
-function renderSignalGame() {
-  const score = document.querySelector("#game-score");
-  const best = document.querySelector("#game-best");
-  const time = document.querySelector("#game-time");
-  const start = document.querySelector("#game-start");
-  const status = document.querySelector("#game-status");
-  const target = document.querySelector("#signal-target");
-
-  score.textContent = String(gameState.score);
-  score.setAttribute("aria-label", currentText("gameScoreLabel")(gameState.score));
-  best.textContent = String(gameState.bestScore);
-  best.setAttribute("aria-label", currentText("gameBestLabel")(gameState.bestScore));
-  time.textContent = String(gameState.secondsLeft);
-  time.setAttribute("aria-label", currentText("gameTimeLabel")(gameState.secondsLeft));
-  start.textContent = currentText(gameState.running ? "gameRunning" : gameState.score > 0 || gameState.secondsLeft === 0 ? "gameRestart" : "gameStart");
-  start.disabled = gameState.running;
-  target.disabled = !gameState.running;
-  target.style.gridColumn = String(gameState.targetPosition % 4 + 1);
-  target.style.gridRow = String(Math.floor(gameState.targetPosition / 4) + 1);
-  status.textContent = gameState.running
-    ? currentText("gamePlaying")
-    : gameState.secondsLeft === 0
-      ? gameState.newRecord
-        ? currentText("gameNewRecord")
-        : currentText("gameFinished")(gameState.score)
-      : currentText("gameReady");
-}
-
 const bubblePlatforms = [
   { x: 0, y: 380, width: 720, height: 40 },
   { x: 68, y: 300, width: 165, height: 14 },
@@ -621,311 +470,6 @@ function createBubbleEnemies() {
     { x: 560, y: 272, spawnX: 560, spawnY: 272, width: 28, height: 28, min: 502, max: 635, speed: 62, direction: 1, trapped: false },
     { x: 490, y: 352, spawnX: 490, spawnY: 352, width: 28, height: 28, min: 400, max: 660, speed: 74, direction: -1, trapped: false },
   ];
-}
-
-function renderPinballGame() {
-  const score = document.querySelector("#pinball-score");
-  const best = document.querySelector("#pinball-best");
-  const balls = document.querySelector("#pinball-balls");
-  const start = document.querySelector("#pinball-launch");
-  score.textContent = String(pinballGameState.score);
-  score.setAttribute("aria-label", currentText("pinballScoreLabel")(pinballGameState.score));
-  best.textContent = String(pinballGameState.bestScore);
-  best.setAttribute("aria-label", currentText("pinballBestLabel")(pinballGameState.bestScore));
-  balls.textContent = String(pinballGameState.balls);
-  balls.setAttribute("aria-label", currentText("pinballBallsLabel")(pinballGameState.balls));
-  start.textContent = currentText(pinballGameState.running ? pinballGameState.ball.launched ? "pinballRunning" : "pinballLaunch" : pinballGameState.hasPlayed && pinballGameState.balls === 0 ? "pinballRestart" : "pinballStart");
-  start.disabled = pinballGameState.running && pinballGameState.ball.launched;
-  document.querySelector("#pinball-status").textContent = pinballGameState.running
-    ? pinballGameState.ball.launched
-      ? currentText("pinballPlaying")
-      : pinballGameState.ballLost
-        ? currentText("pinballBallLost")(pinballGameState.balls)
-        : currentText("pinballReady")
-    : pinballGameState.hasPlayed && pinballGameState.balls === 0
-      ? currentText("pinballGameOver")(pinballGameState.score)
-      : pinballGameState.hasPlayed
-        ? currentText("pinballBallLost")(pinballGameState.balls)
-        : currentText("pinballReady");
-  drawPinballScene();
-}
-
-function pinballFlipperPoints(side) {
-  const left = side === "left";
-  const active = left ? pinballGameState.leftFlipper : pinballGameState.rightFlipper;
-  const pivot = { x: left ? 286 : 434, y: 405 };
-  const angle = left
-    ? active ? -0.72 : 0.18
-    : active ? Math.PI + 0.72 : Math.PI - 0.18;
-  return {
-    pivot,
-    tip: { x: pivot.x + Math.cos(angle) * 86, y: pivot.y + Math.sin(angle) * 86 },
-  };
-}
-
-function drawPinballFlipper(context, side) {
-  const { pivot, tip } = pinballFlipperPoints(side);
-  context.lineCap = "round";
-  context.strokeStyle = "#ffb3cb";
-  context.lineWidth = 22;
-  context.beginPath();
-  context.moveTo(pivot.x, pivot.y);
-  context.lineTo(tip.x, tip.y);
-  context.stroke();
-  context.strokeStyle = "#c81151";
-  context.lineWidth = 13;
-  context.beginPath();
-  context.moveTo(pivot.x, pivot.y);
-  context.lineTo(tip.x, tip.y);
-  context.stroke();
-  context.fillStyle = "#ffe6ef";
-  context.beginPath();
-  context.arc(pivot.x, pivot.y, 13, 0, Math.PI * 2);
-  context.fill();
-  context.fillStyle = "#941342";
-  context.beginPath();
-  context.arc(pivot.x, pivot.y, 6, 0, Math.PI * 2);
-  context.fill();
-}
-
-function drawPinballScene() {
-  if (!pinballContext) return;
-  const context = pinballContext;
-  context.clearRect(0, 0, pinballCanvas.width, pinballCanvas.height);
-  context.fillStyle = "#2f1027";
-  context.fillRect(0, 0, pinballCanvas.width, pinballCanvas.height);
-  const table = context.createLinearGradient(0, 0, pinballCanvas.width, pinballCanvas.height);
-  table.addColorStop(0, "#5c1a47");
-  table.addColorStop(0.52, "#32172f");
-  table.addColorStop(1, "#7b204d");
-  context.fillStyle = table;
-  context.beginPath();
-  context.moveTo(72, 22);
-  context.lineTo(626, 22);
-  context.lineTo(664, 65);
-  context.lineTo(664, 430);
-  context.lineTo(604, 465);
-  context.lineTo(116, 465);
-  context.lineTo(56, 430);
-  context.lineTo(56, 65);
-  context.closePath();
-  context.fill();
-  context.strokeStyle = "#ff9fbd";
-  context.lineWidth = 5;
-  context.stroke();
-
-  context.fillStyle = "#f7b3cb";
-  for (let i = 0; i < 38; i += 1) {
-    const x = 82 + ((i * 97) % 534);
-    const y = 38 + ((i * 61) % 360);
-    context.globalAlpha = i % 4 === 0 ? 0.9 : 0.42;
-    context.beginPath();
-    context.arc(x, y, i % 5 === 0 ? 2.4 : 1.4, 0, Math.PI * 2);
-    context.fill();
-  }
-  context.globalAlpha = 1;
-
-  context.strokeStyle = "#ef7ba2";
-  context.lineWidth = 3;
-  context.beginPath();
-  context.moveTo(78, 35);
-  context.lineTo(78, 425);
-  context.quadraticCurveTo(85, 445, 118, 450);
-  context.moveTo(642, 35);
-  context.lineTo(642, 75);
-  context.moveTo(620, 104);
-  context.lineTo(620, 422);
-  context.quadraticCurveTo(610, 444, 585, 450);
-  context.stroke();
-  context.beginPath();
-  context.arc(359, 277, 84, Math.PI * 1.08, Math.PI * 1.92);
-  context.stroke();
-
-  context.textAlign = "center";
-  context.font = "800 19px 'Leelawadee UI', sans-serif";
-  context.fillStyle = "#ffd7e5";
-  context.fillText("MODDEE • STARCADE", 357, 55);
-  context.font = "700 10px 'Leelawadee UI', sans-serif";
-  context.fillStyle = "#f89fbd";
-  context.fillText("S A K U R A   S P A C E   R U N", 357, 72);
-
-  for (const bumper of pinballGameState.bumpers) {
-    const glow = Math.min(bumper.pulse, 1);
-    context.fillStyle = glow ? `rgba(255, 139, 179, ${0.08 + glow * 0.2})` : "rgba(255, 139, 179, 0.1)";
-    context.beginPath();
-    context.arc(bumper.x, bumper.y, bumper.radius + 12, 0, Math.PI * 2);
-    context.fill();
-    context.fillStyle = "#db2a6a";
-    context.beginPath();
-    context.arc(bumper.x, bumper.y, bumper.radius, 0, Math.PI * 2);
-    context.fill();
-    context.strokeStyle = "#ffd1e0";
-    context.lineWidth = 4;
-    context.beginPath();
-    context.arc(bumper.x, bumper.y, bumper.radius - 6, 0, Math.PI * 2);
-    context.stroke();
-    context.fillStyle = "#fff4f8";
-    context.beginPath();
-    context.arc(bumper.x, bumper.y, 7 + glow * 4, 0, Math.PI * 2);
-    context.fill();
-  }
-  pinballGameState.bumpers.forEach((bumper) => { bumper.pulse = Math.max(0, bumper.pulse - 0.055); });
-
-  const ball = pinballGameState.ball;
-  if (ball.launched || pinballGameState.running) {
-    context.fillStyle = "#fffafd";
-    context.shadowColor = "#ff91b7";
-    context.shadowBlur = 12;
-    context.beginPath();
-    context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-    context.fill();
-    context.shadowBlur = 0;
-    context.fillStyle = "#e43c78";
-    context.beginPath();
-    context.arc(ball.x - 3, ball.y - 3, 2.5, 0, Math.PI * 2);
-    context.fill();
-  } else {
-    context.fillStyle = "#fffafd";
-    context.beginPath();
-    context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-    context.fill();
-  }
-  drawPinballFlipper(context, "left");
-  drawPinballFlipper(context, "right");
-
-  context.fillStyle = "#f8a7c2";
-  context.font = "700 10px 'Leelawadee UI', sans-serif";
-  context.fillText("BUMP!", 260, 153);
-  context.fillText("BUMP!", 450, 166);
-  context.fillText("BONUS", 357, 251);
-  context.textAlign = "start";
-}
-
-function launchPinball() {
-  if (!pinballGameState.running) {
-    if (pinballGameState.balls === 0) {
-      pinballGameState.score = 0;
-      pinballGameState.balls = 3;
-      pinballGameState.bumpers.forEach((bumper) => { bumper.pulse = 0; });
-    }
-    pinballGameState.running = true;
-    pinballGameState.hasPlayed = true;
-  }
-  if (pinballGameState.ball.launched) return;
-  pinballGameState.ballLost = false;
-  pinballGameState.ball = { x: 600, y: 430, vx: -240, vy: -680, radius: 9, launched: true };
-  pinballGameState.lastFrame = 0;
-  renderPinballGame();
-  pinballCanvas.focus();
-  if (activeArcadeTab === "pinball") pinballGameState.frameId = window.requestAnimationFrame(runPinballFrame);
-}
-
-function losePinballBall() {
-  pinballGameState.balls -= 1;
-  pinballGameState.ballLost = true;
-  if (pinballGameState.balls <= 0) {
-    pinballGameState.balls = 0;
-    pinballGameState.running = false;
-    pinballGameState.ball.launched = false;
-    renderPinballGame();
-    if (document.activeElement === pinballCanvas) document.querySelector("#pinball-launch").focus();
-    return;
-  }
-  pinballGameState.ball = { x: 650, y: 430, vx: 0, vy: 0, radius: 9, launched: false };
-  renderPinballGame();
-}
-
-function reflectPinballBall(normalX, normalY, boost = 1) {
-  const ball = pinballGameState.ball;
-  const dot = ball.vx * normalX + ball.vy * normalY;
-  if (dot < 0) {
-    ball.vx = (ball.vx - 2 * dot * normalX) * boost;
-    ball.vy = (ball.vy - 2 * dot * normalY) * boost;
-  }
-}
-
-function collideBallWithFlipper(side) {
-  const ball = pinballGameState.ball;
-  const { pivot, tip } = pinballFlipperPoints(side);
-  const segmentX = tip.x - pivot.x;
-  const segmentY = tip.y - pivot.y;
-  const lengthSquared = segmentX * segmentX + segmentY * segmentY;
-  const amount = Math.max(0, Math.min(1, ((ball.x - pivot.x) * segmentX + (ball.y - pivot.y) * segmentY) / lengthSquared));
-  const nearestX = pivot.x + amount * segmentX;
-  const nearestY = pivot.y + amount * segmentY;
-  const differenceX = ball.x - nearestX;
-  const differenceY = ball.y - nearestY;
-  const distance = Math.hypot(differenceX, differenceY);
-  if (distance > ball.radius + 9) return;
-  const normalX = differenceX / (distance || 1);
-  const normalY = differenceY / (distance || 1);
-  reflectPinballBall(normalX, normalY, 1.06);
-  if (normalY < -0.1) ball.vy = Math.min(ball.vy, -350);
-}
-
-function runPinballFrame(timestamp) {
-  if (!pinballGameState.running || !pinballGameState.ball.launched || activeArcadeTab !== "pinball") return;
-  if (document.visibilityState === "hidden") {
-    pinballGameState.frameId = window.requestAnimationFrame(runPinballFrame);
-    return;
-  }
-  const ball = pinballGameState.ball;
-  const delta = pinballGameState.lastFrame ? Math.min((timestamp - pinballGameState.lastFrame) / 1000, 0.025) : 0;
-  pinballGameState.lastFrame = timestamp;
-  const steps = 3;
-  const step = delta / steps;
-  for (let iteration = 0; iteration < steps; iteration += 1) {
-    ball.vy = Math.min(ball.vy + 570 * step, 760);
-    ball.x += ball.vx * step;
-    ball.y += ball.vy * step;
-
-    if (ball.x - ball.radius < 80) {
-      ball.x = 80 + ball.radius;
-      ball.vx = Math.abs(ball.vx) * 0.82;
-    }
-    if (ball.x + ball.radius > 638 && ball.y > 88) {
-      ball.x = 638 - ball.radius;
-      ball.vx = -Math.abs(ball.vx) * 0.82;
-    }
-    if (ball.y - ball.radius < 30) {
-      ball.y = 30 + ball.radius;
-      ball.vy = Math.abs(ball.vy) * 0.84;
-    }
-    if (ball.x > 612 && ball.y < 95 && ball.vx < 0) {
-      ball.x -= 36 * step;
-    }
-
-    for (const bumper of pinballGameState.bumpers) {
-      const dx = ball.x - bumper.x;
-      const dy = ball.y - bumper.y;
-      const distance = Math.hypot(dx, dy);
-      const minimum = ball.radius + bumper.radius;
-      if (distance >= minimum) continue;
-      const normalX = dx / (distance || 1);
-      const normalY = dy / (distance || 1);
-      ball.x = bumper.x + normalX * minimum;
-      ball.y = bumper.y + normalY * minimum;
-      reflectPinballBall(normalX, normalY, 1.12);
-      ball.vx += normalX * 100;
-      ball.vy += normalY * 100;
-      bumper.pulse = 1;
-      pinballGameState.score += 100;
-      if (pinballGameState.score > pinballGameState.bestScore) {
-        pinballGameState.bestScore = pinballGameState.score;
-        localStorage.setItem("moddee-pinball-game-best", String(pinballGameState.bestScore));
-      }
-      renderPinballGame();
-    }
-
-    collideBallWithFlipper("left");
-    collideBallWithFlipper("right");
-    if (ball.y > pinballCanvas.height + ball.radius) {
-      losePinballBall();
-      if (!pinballGameState.running || !pinballGameState.ball.launched) return;
-    }
-  }
-  drawPinballScene();
-  pinballGameState.frameId = window.requestAnimationFrame(runPinballFrame);
 }
 
 function renderBubbleGame() {
@@ -1030,30 +574,6 @@ function drawBubbleScene() {
   }
   const player = bubbleGameState.player;
   drawBubbleCharacter(context, player.x, player.y, player.width, player.height, "#d4145a", true);
-}
-
-function setArcadeTab(tabName, focusTab = false) {
-  const previousTab = activeArcadeTab;
-  activeArcadeTab = tabName;
-  const tabNames = ["star", "pinball", "bubble"];
-  for (const name of tabNames) {
-    const tab = document.querySelector(`#${name}-game-tab`);
-    const panel = document.querySelector(`#${name}-game-panel`);
-    const active = name === tabName;
-    tab.classList.toggle("arcade-tab--active", active);
-    tab.setAttribute("aria-selected", String(active));
-    tab.tabIndex = active ? 0 : -1;
-    panel.hidden = !active;
-    if (active && focusTab) tab.focus();
-  }
-  if (previousTab === "star" && tabName !== "star") pauseSignalGameTimer();
-  if (previousTab !== "star" && tabName === "star" && gameState.running) resumeSignalGameTimer();
-  if (pinballGameState.frameId) window.cancelAnimationFrame(pinballGameState.frameId);
-  if (bubbleGameState.frameId) window.cancelAnimationFrame(bubbleGameState.frameId);
-  pinballGameState.frameId = 0;
-  bubbleGameState.frameId = 0;
-  if (tabName === "pinball" && pinballGameState.running && pinballGameState.ball.launched) pinballGameState.frameId = window.requestAnimationFrame(runPinballFrame);
-  if (tabName === "bubble" && bubbleGameState.running) bubbleGameState.frameId = window.requestAnimationFrame(runBubbleFrame);
 }
 
 function addChatMessage(role, text) {
@@ -1218,90 +738,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !chatPanel.hidden) closeChat();
 });
 
-function finishSignalGame() {
-  window.clearInterval(gameState.timer);
-  gameState.timer = null;
-  gameState.running = false;
-  gameState.secondsLeft = 0;
-  renderSignalGame();
-  if (document.activeElement === document.querySelector("#signal-target")) {
-    document.querySelector("#game-start").focus();
-  }
-}
-
-function pauseSignalGameTimer() {
-  if (gameState.timer === null) return;
-  window.clearInterval(gameState.timer);
-  gameState.timer = null;
-}
-
-function resumeSignalGameTimer() {
-  if (!gameState.running || gameState.timer !== null) return;
-  gameState.timer = window.setInterval(() => {
-    if (document.visibilityState === "hidden" || activeArcadeTab !== "star") return;
-    gameState.secondsLeft -= 1;
-    if (gameState.secondsLeft <= 0) {
-      finishSignalGame();
-      return;
-    }
-    renderSignalGame();
-  }, 1000);
-}
-
-function startSignalGame() {
-  if (gameState.timer !== null) window.clearInterval(gameState.timer);
-  gameState.score = 0;
-  gameState.secondsLeft = 20;
-  gameState.running = true;
-  gameState.newRecord = false;
-  gameState.targetPosition = Math.floor(Math.random() * 12);
-  renderSignalGame();
-  document.querySelector("#signal-target").focus();
-  resumeSignalGameTimer();
-}
-
-document.querySelector("#game-start").addEventListener("click", startSignalGame);
-
-document.querySelector("#signal-target").addEventListener("click", () => {
-  if (!gameState.running) return;
-  gameState.score += 1;
-  if (gameState.score > gameState.bestScore) {
-    gameState.newRecord = true;
-    gameState.bestScore = gameState.score;
-    localStorage.setItem("moddee-star-game-best", String(gameState.bestScore));
-  }
-  const previousPosition = gameState.targetPosition;
-  let nextPosition = Math.floor(Math.random() * 11);
-  if (nextPosition >= previousPosition) nextPosition += 1;
-  gameState.targetPosition = nextPosition;
-  renderSignalGame();
-});
-
-function setPinballFlipper(side, active) {
-  if (side === "left") pinballGameState.leftFlipper = active;
-  else pinballGameState.rightFlipper = active;
-  drawPinballScene();
-}
-
-document.querySelector("#pinball-launch").addEventListener("click", launchPinball);
-document.querySelectorAll("[data-pinball-control]").forEach((button) => {
-  const action = button.dataset.pinballControl;
-  if (action === "launch") {
-    button.addEventListener("click", launchPinball);
-    return;
-  }
-  const side = action === "left" ? "left" : "right";
-  button.addEventListener("pointerdown", (event) => {
-    event.preventDefault();
-    button.setPointerCapture(event.pointerId);
-    setPinballFlipper(side, true);
-  });
-  const release = () => setPinballFlipper(side, false);
-  button.addEventListener("pointerup", release);
-  button.addEventListener("pointercancel", release);
-  button.addEventListener("lostpointercapture", release);
-});
-
 function resetBubbleGame() {
   bubbleGameState.score = 0;
   bubbleGameState.lives = 3;
@@ -1361,7 +797,7 @@ function finishBubbleGame() {
 }
 
 function runBubbleFrame(timestamp) {
-  if (!bubbleGameState.running || activeArcadeTab !== "bubble") return;
+  if (!bubbleGameState.running) return;
   if (document.visibilityState === "hidden") {
     bubbleGameState.frameId = window.requestAnimationFrame(runBubbleFrame);
     return;
@@ -1471,44 +907,8 @@ document.querySelectorAll("[data-bubble-control]").forEach((button) => {
   button.addEventListener("lostpointercapture", release);
 });
 
-document.querySelectorAll("[role=tab][aria-controls$='-game-panel']").forEach((tab) => {
-  tab.addEventListener("click", () => setArcadeTab(tab.id.replace("-game-tab", "")));
-  tab.addEventListener("keydown", (event) => {
-    const tabs = [...document.querySelectorAll("[role=tab][aria-controls$='-game-panel']")];
-    const currentIndex = tabs.indexOf(tab);
-    const nextIndex = event.key === "ArrowRight"
-      ? (currentIndex + 1) % tabs.length
-      : event.key === "ArrowLeft"
-        ? (currentIndex - 1 + tabs.length) % tabs.length
-        : event.key === "Home"
-          ? 0
-          : event.key === "End"
-            ? tabs.length - 1
-            : currentIndex;
-    if (nextIndex === currentIndex) return;
-    event.preventDefault();
-    setArcadeTab(tabs[nextIndex].id.replace("-game-tab", ""), true);
-  });
-});
-
 window.addEventListener("keydown", (event) => {
-  const focusedPanel = document.activeElement?.closest("#pinball-game-panel, #bubble-game-panel");
-  if (!focusedPanel) return;
-  if (focusedPanel.id === "pinball-game-panel") {
-    const key = event.key.toLowerCase();
-    if (key === " " || key === "arrowleft" || key === "arrowright" || key === "z" || key === "x") event.preventDefault();
-    if (key === " " && !event.repeat && !pinballGameState.ball.launched) launchPinball();
-    if (key === "arrowleft" || key === "z") {
-      pinballGameState.leftFlipper = true;
-      drawPinballScene();
-    }
-    if (key === "arrowright" || key === "x") {
-      pinballGameState.rightFlipper = true;
-      drawPinballScene();
-    }
-    return;
-  }
-  if (focusedPanel.id !== "bubble-game-panel" || !bubbleGameState.running) return;
+  if (!document.activeElement?.closest("#bubble-game-panel") || !bubbleGameState.running) return;
   const key = event.key.toLowerCase();
   if (["arrowleft", "arrowright", "arrowup", " ", "x", "a", "d"].includes(key)) event.preventDefault();
   bubbleGameState.keys.add(key);
@@ -1517,36 +917,21 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("keyup", (event) => {
-  const key = event.key.toLowerCase();
-  bubbleGameState.keys.delete(key);
-  if (key === "arrowleft" || key === "z") {
-    pinballGameState.leftFlipper = false;
-    drawPinballScene();
-  }
-  if (key === "arrowright" || key === "x") {
-    pinballGameState.rightFlipper = false;
-    drawPinballScene();
-  }
+  bubbleGameState.keys.delete(event.key.toLowerCase());
 });
 
 window.addEventListener("blur", () => {
-  pinballGameState.leftFlipper = false;
-  pinballGameState.rightFlipper = false;
   bubbleGameState.keys.clear();
   bubbleGameState.touchControls.clear();
-  drawPinballScene();
 });
 
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "hidden") {
-    if (pinballGameState.frameId) window.cancelAnimationFrame(pinballGameState.frameId);
     if (bubbleGameState.frameId) window.cancelAnimationFrame(bubbleGameState.frameId);
-    pinballGameState.frameId = 0;
     bubbleGameState.frameId = 0;
     return;
   }
-  if (activeArcadeTab === "pinball" && pinballGameState.running && pinballGameState.ball.launched) pinballGameState.frameId = window.requestAnimationFrame(runPinballFrame);
-  if (activeArcadeTab === "bubble" && bubbleGameState.running) bubbleGameState.frameId = window.requestAnimationFrame(runBubbleFrame);
+  if (bubbleGameState.running) bubbleGameState.frameId = window.requestAnimationFrame(runBubbleFrame);
 });
 
 document.querySelector("#search-form").addEventListener("submit", (event) => {
