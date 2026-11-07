@@ -1276,6 +1276,46 @@ select:focus-visible { outline-color: #a40f47; }
 .featured-video__link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; box-shadow: 0 0 0 5px var(--ink); }
 .featured-video__link svg { width: 15px; height: 15px; }
 
+.video-playlist { margin-top: 30px; }
+.video-playlist__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+.video-playlist__heading h2 { margin: 0; color: var(--ink); font-size: 20px; font-weight: 800; letter-spacing: -.03em; }
+.video-playlist__heading p { margin: 0; color: var(--secondary-copy); font-size: 13px; }
+.video-playlist__links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  border: 1px solid var(--silver-panel);
+  border-top: 1px solid var(--silver-panel);
+  background: var(--surface);
+}
+.video-playlist__link {
+  display: flex;
+  min-width: 0;
+  min-height: 54px;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--silver-panel);
+  color: var(--ink);
+  transition: color .18s ease, background .18s ease;
+}
+.video-playlist__link:hover { color: var(--accent-dark); background: var(--quiet-canvas); }
+.video-playlist__link:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: 2px; }
+.video-playlist__number {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--silver-panel);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--accent-dark);
+  font-size: 11px;
+  font-weight: 800;
+}
+.video-playlist__label { overflow: hidden; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.video-playlist__link svg { width: 16px; height: 16px; flex: 0 0 auto; margin-left: auto; color: var(--accent); }
+
 @media (max-width: 620px) {
   .featured-video { grid-template-columns: 1fr; margin-top: 24px; }
   .featured-video__preview { min-height: 165px; }
@@ -1283,4 +1323,11 @@ select:focus-visible { outline-color: #a40f47; }
   .featured-video__copy h2 { font-size: 20px; }
   .featured-video__copy p { margin-block: 7px 15px; font-size: 12px; }
   .featured-video__link { min-height: 39px; }
+  .video-playlist { margin-top: 24px; }
+  .video-playlist__heading { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .video-playlist__heading h2 { font-size: 18px; }
+  .video-playlist__heading p { font-size: 12px; }
+  .video-playlist__links { grid-template-columns: 1fr; }
+  .video-playlist__link { min-height: 48px; }
+  .video-playlist__label { font-size: 13px; }
 }
